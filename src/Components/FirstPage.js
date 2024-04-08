@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import Student from '../images/student.png';
 import Professional from '../images/professional.png';
 import Parent from "../images/parent.png";
 import Learner from "../images/lifelong learner.png";
 import Teacher from "../images/teacher.png";
 import Other from "../images/other.png";
-
+import { useDispatch } from 'react-redux';
 
 
 export default function FirstPage(){
+  const dispatch=useDispatch();
+  const [selectedUserOptionsId,setSelectedUserOptionsId]=useState("");
+
   const userOptionsJSON = [
     {
       id: 1,
@@ -32,11 +36,16 @@ export default function FirstPage(){
     { id: 5, userStatus: "Teacher", image: `${Teacher}` },
     { id: 6, userStatus: "Other", image: `${Other}` },
   ];
+
+  const handleShadow=(item)=>{
+    setSelectedUserOptionsId(item.id);
+        dispatch({ type: "ADD_USER_STATUS", payload: [selectedUserOptionsId, item] });
+  }
        
   const showUserOptions=()=>{
     return userOptionsJSON.map((item)=>{
       return (
-        <div className="p-5 flex items-center border-box h-16 w-96 border-2 mt-4 rounded-md">
+        <div onClick={()=>handleShadow(item)}   className="p-5 flex items-center border-box h-16 w-96 border-2 mt-4 rounded-md">
           <img src={`${item.image}`} className="h-12 w-12" />
           <b>{item.userStatus}</b> &nbsp;
           <span className="text-slate-400">&nbsp;{item.description}</span>
@@ -44,10 +53,11 @@ export default function FirstPage(){
       );
     })
   }
+
     return (
-      <div className="flex flex-col items-center mt-8">
+      <div className="flex flex-col items-center mt-6">
         <div className="w-5/6 h-2 bg-gradient-to-r from-lime-500 from-10% via-white via-30% to-white to-90% rounded border border-inherit"></div>
-        <div className="flex flex-col items-center mt-4 tracking-normal">
+        <div className="flex flex-col items-center mt-2 tracking-normal">
           <div className="text-2xl font-semibold">
             Which describes you best ?
           </div>
