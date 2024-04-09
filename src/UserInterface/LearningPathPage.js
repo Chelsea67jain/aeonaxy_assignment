@@ -1,3 +1,22 @@
+import CoursesComponent from "../Components/CoursesComponent";
+
+
 export default function LearningPathPage() {
-  return <div></div>;
+
+ 
+
+  return (
+    <div className="flex flex-col items-center justify-center mt-40">
+      <div className="font-bold text-4xl tracking-wide">
+        Learning path based on your answers
+      </div>
+      <div className="mt-8">
+        Choose one to get started. You can switch anytime
+      </div>
+      <div className="flex">
+        <CoursesComponent heading={"Foundational Math"} />
+        <CoursesComponent heading={"Mathematical Thinking"} />
+      </div>
+    </div>
+  );
 }

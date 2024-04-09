@@ -4,11 +4,13 @@ import Bow from '../images/Bow.png';
 import Goal from "../images/Goal.png";
 import EyeEmoji from "../images/Eyes.png";
 import Header from '../Components/Header';
+import {useNavigate} from 'react-router-dom';
 
 
 
 
 export default function UserInterestPage(props){
+  const navigate=useNavigate();
      const userInterestJSON = [
        {
          userinterestid: 1,
@@ -71,7 +73,7 @@ return (
       </p>
       {showUserInterests()}
 
-      <button className="h-12 w-36 bg-black text-white mt-4 hover:bg-gray-400 active:bg-gray-400 focus:outline-none rounded-md font-semibold tracking-normal">
+      <button onClick={()=>navigate('/rightplacepage')} className="h-12 w-36 bg-black text-white mt-4 hover:bg-gray-400 active:bg-gray-400 focus:outline-none rounded-md font-semibold tracking-normal">
         Continue
       </button>
     </div>

@@ -1,6 +1,31 @@
+import Header from "../Components/Header";
+import WeightingIcon from '../images/Weighting machine.jpg';
+import {useNavigate} from 'react-router-dom';
 
 export default function RightPlacePage(){
-    return(
-        
-    )
+    const navigate=useNavigate();
+    return (
+      <div className="flex flex-col items-center mt-8">
+        <Header page={"rightplacepage"} />
+        <div className="flex flex-row items-center mt-4 tracking-normal">
+          <img src={`${WeightingIcon}`} className="h-96 w-80 mr-40" />
+          <div className="w-5/6">
+            <div className="text-2xl font-semibold">
+              You're in the right place
+            </div>
+            <div className="mt-8 w-96">
+              Brilliant gets you hands-on to help improve your professional
+              skills and knowledge. You'll interact with concepts and solve fun
+              problems in math, science and computer science
+            </div>
+          </div>
+        </div>
+        <button
+          onClick={() => navigate("/mathpage")}
+          className="h-12 w-36 bg-black text-white mt-4 hover:bg-gray-400 active:bg-gray-400 focus:outline-none rounded-md font-semibold tracking-normal"
+        >
+          Continue
+        </button>
+      </div>
+    );
 }
