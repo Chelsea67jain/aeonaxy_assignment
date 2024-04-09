@@ -6,10 +6,13 @@ import Learner from "../images/lifelong learner.png";
 import Teacher from "../images/teacher.png";
 import Other from "../images/other.png";
 import { useDispatch } from 'react-redux';
-
+import {useNavigate} from 'react-router-dom'
+import Header from '../Components/Header';
 
 export default function FirstPage(){
   const dispatch=useDispatch();
+  const navigate=useNavigate();
+
   const [selectedUserOptionsId,setSelectedUserOptionsId]=useState("");
 
   const userOptionsJSON = [
@@ -56,7 +59,7 @@ export default function FirstPage(){
 
     return (
       <div className="flex flex-col items-center mt-6">
-        <div className="w-5/6 h-2 bg-gradient-to-r from-lime-500 from-10% via-white via-30% to-white to-90% rounded border border-inherit"></div>
+     <Header page={"firstpage"} />
         <div className="flex flex-col items-center mt-2 tracking-normal">
           <div className="text-2xl font-semibold">
             Which describes you best ?
@@ -68,7 +71,7 @@ export default function FirstPage(){
           {showUserOptions()}
         
 
-          <button className="h-12 w-36 bg-gray-500 text-white mt-4 hover:bg-gray-400 active:bg-gray-400 focus:outline-none rounded-md font-semibold tracking-normal">
+          <button onClick={()=>navigate('/userinterest')} className="h-12 w-36 bg-gray-500 text-white mt-4 hover:bg-gray-400 active:bg-gray-400 focus:outline-none rounded-md font-semibold tracking-normal">
             Continue
           </button>
         </div>
