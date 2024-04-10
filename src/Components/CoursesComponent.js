@@ -5,7 +5,7 @@ const CoursesComponent = (props) => {
   return (
     <>
      
-      <div className="p-5 flex items-center flex-row border-box h-30 w-96 border-2 mt-8 mr-4 rounded-md">
+      <div className="p-5 flex items-center flex-row border-box h-30 w-96 sm:w-80 border-2 mt-8 mr-4 rounded-md">
         <div className="flex flex-col">
           <b>{props.heading}</b>
           <span>
@@ -19,4 +19,4 @@ const CoursesComponent = (props) => {
   );
 }
 
-export default CoursesComponent
+export default CoursesComponent;

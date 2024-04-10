@@ -49,10 +49,10 @@ const handleShadow=()=>{
    return (
      <div
        onClick={() => handleShadow(item)}
-       className="p-5 flex items-center border-box h-16 w-96 border-2 mt-6 rounded-md"
+       className="p-5 sm:w-64 sm:p-2 sm:mr-2 flex items-center border-box h-16 w-96 border-2 mt-6 sm:mt-4 rounded-md"
      >
        <img src={`${item.image}`} className="h-12 w-12" />
-     
+
        <span className="text-sm">&nbsp;{item.description}</span>
      </div>
    );
@@ -63,10 +63,10 @@ return (
   <div className="flex flex-col items-center mt-8">
     <Header page={"userinterestpage"} />
     <div className="flex flex-col items-center mt-4 tracking-normal">
-      <div className="text-2xl font-semibold">
+      <div className="text-2xl sm:text-sm font-semibold">
         Which are you most interested in ?
       </div>
-      <p className="mt-2 text-slate-400">
+      <p className="mt-2 sm:text-center sm:text-xs sm:w-64 text-slate-400">
         {" "}
         Choose just one. This will help us get you started (but won't limit your
         experience)

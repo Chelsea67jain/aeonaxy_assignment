@@ -23,9 +23,8 @@ return () => clearTimeout(timer);
             Loading...
           </span>
         </div>
-        <div className="mt-10 w-84 text-xl font-semibold">
-          Finding learning path recommendations for you based on 
-       your responses
+        <div className="mt-10 w-84 text-xl sm:text-center md:text-center font-semibold">
+          Finding learning path recommendations for you based on your responses
         </div>
       </div>
     );

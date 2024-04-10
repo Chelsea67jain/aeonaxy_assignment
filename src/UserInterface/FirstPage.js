@@ -48,10 +48,13 @@ export default function FirstPage(){
   const showUserOptions=()=>{
     return userOptionsJSON.map((item)=>{
       return (
-        <div onClick={()=>handleShadow(item)}   className="p-5 flex items-center border-box h-16 w-96 border-2 mt-4 rounded-md">
+        <div
+          onClick={() => handleShadow(item)}
+          className="p-5 sm:p-2 flex items-center border-box h-16 w-96 sm:w-64 border-2 mt-4 sm:mt-2 rounded-md"
+        >
           <img src={`${item.image}`} className="h-12 w-12" />
           <b>{item.userStatus}</b> &nbsp;
-          <span className="text-slate-400">&nbsp;{item.description}</span>
+          <span className="sm:hidden text-slate-400">&nbsp;{item.description}</span>
         </div>
       );
     })
@@ -61,10 +64,10 @@ export default function FirstPage(){
       <div className="flex flex-col items-center mt-6">
      <Header page={"firstpage"} />
         <div className="flex flex-col items-center mt-2 tracking-normal">
-          <div className="text-2xl font-semibold">
+          <div className="text-2xl sm:text-xl font-semibold">
             Which describes you best ?
           </div>
-          <p className="mt-2 text-slate-400">
+          <p className="mt-2 sm:text-center text-slate-400">
             {" "}
             This will help us personalize your experience
           </p>

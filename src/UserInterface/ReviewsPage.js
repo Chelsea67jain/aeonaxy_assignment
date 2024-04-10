@@ -9,14 +9,17 @@ export default function ReviewPage(){
     return (
       <div className="flex flex-col items-center mt-8">
         <Header page={"rightplacepage"} />
-        <div className="flex flex-row items-center justify-center mt-4 tracking-normal">
-          <img src={`${CartoonImage}`} className="h-full w-80 mr-40 mt-6" />
+        <div className="flex flex-row sm:flex-col md:flex-col items-center justify-center mt-4 sm:mt-2 md:mt-2 tracking-normal">
+          <img
+            src={`${CartoonImage}`}
+            className="h-full w-80 mr-40 sm:mr-0 sm:h-64 md:mr-0 md:h-64 mt-6 sm:mt-2"
+          />
           <div className="w-5/6">
             <div className="text-2xl font-semibold">You're on your way!</div>
 
-            <div className="w-96 mt-6">
+            <div className="w-96 mt-6 sm:mt-2 sm:w-80 md:mt-2 md:w-80">
               <img src={`${Rating}`} className="w-24" />
-              <i >
+              <i>
                 {" "}
                 "Through its engaging and well-structured courses, Brillant has
                 taught me mathematical concepts that I previously struggled to
