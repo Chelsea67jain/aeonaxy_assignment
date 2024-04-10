@@ -5,8 +5,8 @@ import Goal from "../images/Goal.png";
 import EyeEmoji from "../images/Eyes.png";
 import Header from '../Components/Header';
 import {useNavigate} from 'react-router-dom';
-
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
 
 
 export default function UserInterestPage(props){
@@ -61,7 +61,9 @@ const handleShadow=()=>{
 
 return (
   <div className="flex flex-col items-center mt-8">
-    <Header page={"userinterestpage"} />
+  
+      <div className="w-5/6 h-2 bg-gradient-to-r from-lime-500 from-40% via-white via-30% to-white to-90% rounded border border-inherit"></div>
+    
     <div className="flex flex-col items-center mt-4 tracking-normal">
       <div className="text-2xl sm:text-sm font-semibold">
         Which are you most interested in ?
@@ -73,7 +75,10 @@ return (
       </p>
       {showUserInterests()}
 
-      <button onClick={()=>navigate('/rightplacepage')} className="h-12 w-36 bg-black text-white mt-4 hover:bg-gray-400 active:bg-gray-400 focus:outline-none rounded-md font-semibold tracking-normal">
+      <button
+        onClick={() => navigate("/rightplacepage")}
+        className="h-12 w-36 bg-black text-white mt-4 hover:bg-gray-400 active:bg-gray-400 focus:outline-none rounded-md font-semibold tracking-normal"
+      >
         Continue
       </button>
     </div>

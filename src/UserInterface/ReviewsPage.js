@@ -8,7 +8,7 @@ export default function ReviewPage(){
 
     return (
       <div className="flex flex-col items-center mt-8">
-        <Header page={"rightplacepage"} />
+        <div className="w-5/6 h-2 bg-gradient-to-r from-lime-500 from-100% via-white via-30% to-white to-90% rounded border border-inherit"></div>
         <div className="flex flex-row sm:flex-col md:flex-col items-center justify-center mt-4 sm:mt-2 md:mt-2 tracking-normal">
           <img
             src={`${CartoonImage}`}

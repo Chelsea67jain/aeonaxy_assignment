@@ -55,7 +55,7 @@ export default function UserMathComfortPage(){
  
     return (
       <div className="flex flex-col items-center mt-8">
-        <Header page={"mathpage"} />
+        <div className="w-5/6 h-2 bg-gradient-to-r from-lime-500 from-60% via-white via-30% to-white to-90% rounded border border-inherit"></div>
         <div className="flex flex-col items-center mt-20 sm:mt-6 md:mt-6 tracking-normal">
           <div className="text-2xl sm:text-xl font-semibold">
             What is your maths comfort zone?
