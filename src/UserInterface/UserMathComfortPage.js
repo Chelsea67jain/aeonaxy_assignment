@@ -43,7 +43,7 @@ export default function UserMathComfortPage(){
    return (
      <div
        onClick={() => handleShadow(item)}
-       className="p-5 flex items-center flex-col justify-center border-box h-40 w-64 md:w-48 border-2 mt-12 sm:mt-6 md:mt-6 ml-4 rounded-md"
+       className="p-5 flex items-center flex-col justify-center border-box h-40 w-64 md:w-48 border-2 mt-12 sm:mt-4 md:mt-6 ml-4 rounded-md"
      >
        <span className="text-xl">{item.algebricexpression}</span>
        <span className="text-base mt-4 md:text-sm">&nbsp;{item.heading}</span>
@@ -54,13 +54,13 @@ export default function UserMathComfortPage(){
  }
  
     return (
-      <div className="flex flex-col items-center mt-8">
+      <div className="flex flex-col items-center mt-8 sm:mt-4">
         <div className="w-5/6 h-2 bg-gradient-to-r from-lime-500 from-60% via-white via-30% to-white to-90% rounded border border-inherit"></div>
-        <div className="flex flex-col items-center mt-20 sm:mt-6 md:mt-6 tracking-normal">
+        <div className="flex flex-col items-center mt-20 sm:mt-4 md:mt-6 tracking-normal">
           <div className="text-2xl sm:text-xl font-semibold">
             What is your maths comfort zone?
           </div>
-          <p className="mt-4 sm:text-center">
+          <p className="mt-4 sm:mt-2 sm:text-center">
             {" "}
             Choose the highest level you feel confident in - you can always
             adjust later.
