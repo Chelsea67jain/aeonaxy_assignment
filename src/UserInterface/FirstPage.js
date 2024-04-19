@@ -53,6 +53,7 @@ export default function FirstPage(){
     console.log(item.id);
     setChangeBorderColor(true);
     setSelectedUserOptionsId(item.id);
+    
         dispatch({ type: "ADD_USER_STATUS", payload: [item.id, item] });
   }
 

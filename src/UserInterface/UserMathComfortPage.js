@@ -66,7 +66,7 @@ export default function UserMathComfortPage(){
             adjust later.
           </p>
         </div>
-        <div class="flex flex-row sm:flex-col md:flex-col">
+        <div className="flex flex-row sm:flex-col md:flex-col">
           {" "}
           {showMathsOptions()}
         </div>
